@@ -1,0 +1,41 @@
+.pager li .active_link{
+  background: #000 !important;  
+}
+
+body{
+    background-color:#3c7b61;
+    color:#fff;
+    font-family: Ariel, sans-serif;
+}
+
+.header-color{
+    background-color:#92b79c;
+   
+    
+}
+
+a{
+    color:#a20d29;
+    text-shadow:  2px 1px 1px #92b79c;
+    
+}
+
+a:hover{
+    color:#fff;
+    
+}
+
+h1 small{
+    color:white;
+    
+}
+
+.well{
+    background-color:#92b79c;
+    
+}
+
+
+
+
+

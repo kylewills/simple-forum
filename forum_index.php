@@ -56,18 +56,20 @@
             if(isset($_POST['submit'])){
                 
                  //echo $_POST['name'];
-                
+                //whitelist
                 $name = $_POST['name'];
                 $msg = $_POST['msg'];               
 
                 
-           $query = "INSERT INTO chat (name,msg) VALUES ('$name','$msg')";
+           $stmt = $connection->prepare("INSERT INTO chat (name,msg) VALUES(?,?)");
+           $stmt->bind_param("ss", $name, $msg);
+           $stmt->execute();
                 
-                $run = $connection->query($query);
-                
-                if($run){
+                //$run = $connection->query($query);
+            
+                /*if($run){
     "<embed loop='false' src='blopchat.wav' hidden='true' autoplay='true'</embed>";
-                }
+                }*/
                
             }
            ?>
@@ -77,7 +79,6 @@
             
 
             <!-- Blog Sidebar Widgets Column -->
-  <?php  //include"includes/sidebar.php" ?> 
 
        
         <!-- /.row -->
